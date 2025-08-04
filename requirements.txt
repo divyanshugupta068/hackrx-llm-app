@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+pydantic
+sentence-transformers
+pinecone-client
+openai
+scikit-learn
+PyMuPDF
