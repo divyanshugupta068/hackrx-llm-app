@@ -9,6 +9,7 @@ import pinecone
 import openai
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
+import uvicorn
 
 # ------------------------
 # 📦 Load environment variables from .env
@@ -138,3 +139,10 @@ def query_doc(input_data: InputData, authorization: str = Header(...)):
         final_answers.append(answer)
 
     return {"answers": final_answers}
+
+# ------------------------
+# 🖥 Local/Render Startup
+# ------------------------
+if _name_ == "_main_":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("hackrx:app", host="0.0.0.0", port=port)
