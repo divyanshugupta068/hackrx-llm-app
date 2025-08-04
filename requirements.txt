@@ -3,8 +3,9 @@ uvicorn
 requests
 pydantic
 sentence-transformers
-pinecone-client==3.0.0
+pinecone-client==2.2.2
 openai
 scikit-learn
 
 PyMuPDF
+
